@@ -1,6 +1,5 @@
 import Button from "../components/Button"
 import Question from "../components/Question"
-import { Fade } from "react-reveal"
 
 function Quiz({ questionsArray, selectAnswer, changePage }) {
   const quizElements = questionsArray.map(questionObject => {
@@ -15,17 +14,15 @@ function Quiz({ questionsArray, selectAnswer, changePage }) {
   })
 
   return (
-    <Fade>
-      <div className="quiz-container">
-        {quizElements}
-        <div className="check-answers-btn">
-          <Button 
-            changePage={changePage} 
-            value="Check answers" 
-          />
-        </div>
+    <div className="quiz-container">
+      {quizElements}
+      <div className="check-answers-btn">
+        <Button 
+          changePage={changePage} 
+          value="Check answers" 
+        />
       </div>
-    </Fade>
+    </div>
   )
 }
 
