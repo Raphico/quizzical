@@ -39,7 +39,7 @@ function Correction({ questionsArray, changePage, handleChangeQuestion }) {
         className="text-center" 
         style={{ marginTop: "2rem" }}
       >
-        <h1 className="fs-600 fw-700">You got {score / 2}/5 correct answers &#129315;</h1>
+        <h1 className="fs-600 fw-700">You got {Math.ceil(score / 2)}/5 correct answers &#129315;</h1>
         <button onClick={handleChange} className="btn">Play again</button>
       </div>
     </div>
